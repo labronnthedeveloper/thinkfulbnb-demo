@@ -220,7 +220,6 @@ footer p {
   width: 46%;
  }
 
-
  .row {
   display: flex;
   flex-wrap: wrap;
@@ -241,6 +240,10 @@ footer p {
   margin: 0px;
 }
 
+.textflexstart {
+  align-self: flex-start;
+  margin-left: 10px;
+}
 
 .hostcontents {
   margin-top: 65px;
