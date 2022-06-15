@@ -168,19 +168,27 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px){
+@media all and (min-width: 800px){
+  html,body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
 
   *{
     box-sizing: border-box;
   }
-  body {
-    overflow-x: hidden;
+
+  .logo {
+    padding: 10px;
   }
+
   .logoandmenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   header {
     text-align: left;
     align-content: center;
@@ -193,7 +201,14 @@ footer p {
   header nav ul li {
     padding: 0;
     margin-bottom: 10px;
+    align-items: center;
   }
+
+  header nav ul li a {
+    text-align: center;
+    align-self: center;
+}
+  
   form {
     flex-direction: row;
     justify-content: space-between;
@@ -221,6 +236,11 @@ footer p {
   width: 46%;
  }
 
+ #stay{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
  .row {
   display: flex;
   flex-wrap: wrap;
@@ -248,22 +268,24 @@ footer p {
 
 .hostcontents {
   margin-top: 65px;
-  position: relative;
-  width: 50%;
-  height: 200px;
+  width: 40%;
+  align-self: center;
 }
 
+.spaced {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
 #host {
   display: flex;
+  justify-content: space-between;
 }
  #host img{
-  width: 500px;
-  margin-left: 300px;
+  width: 600px;
 }
 .hostimg {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
+  align-self: flex-end;
 }
 
 label {
@@ -291,11 +313,56 @@ label {
 
   .form-containers{
     flex-direction: column;
+    margin-right: 30px;
   }
 
   .formitem label {
     margin-left: 35px;
   }
 
+}
+
+@media only screen and (min-width: 300px) and (max-width: 355px) {
+  .logo {
+    font-size: 50px;
+  }
+	
+}
+
+@media only screen and (min-width: 800px) and (max-width: 872px) {
+  #host img{
+    width: 390px;
+  }
+  .spaced input, select{
+    width: 68%
+  }
+	
+}
+@media only screen and (min-width: 872px) and (max-width: 1000px) {
+  #host img{
+    width: 450px;
+  }
+  .spaced{
+    justify-content: center;
+  }
+  .spaced, .spaced input, .spaced select{
+    width: 88%
+  }
+
+	
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1120px) {
+  #host img{
+    width: 485px;
+  }
+  .spaced{
+    justify-content: center;
+  }
+  .spaced, .spaced input, .spaced select{
+    width: 88%
+  }
+
+	
 }
 
